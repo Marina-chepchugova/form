@@ -1,5 +1,5 @@
-const form = document.forms['form'];
-const button =form.elements['button'];
+const form = document.forms['form']; //ищем форму1
+const button =form.elements['button'];//ищем кнопку
 
 const inputArr = Array.from(form)
 
@@ -14,11 +14,11 @@ const validInputArr = [];
 	}
  })
 
-form.addEventListener('input' , inputHandler);
+form.addEventListener('input' , inputHandler);//слушаем форму , событие пр срабатывании, и вызывается функция
 button.addEventListener('click' , buttonHandler);
 
 
-function inputHandler({target}){
+function inputHandler({target}){ //
 if(target.hasAttribute('data-reg')){
 	inputCheck(target);
 }
